@@ -60,8 +60,6 @@ $(SED) \
 -e 's,@includedir\@,$(includedir),g' \
 -e 's,@pkgincludedir\@,$(pkgincludedir),g' \
 -e 's,@pkglibdir\@,$(pkglibdir),g' \
--e 's,@ender_sharp_requirements_private\@,$(ender_sharp_requirements_private),g' \
--e 's,@ender_sharp_requirements\@,$(ender_sharp_requirements),g' \
 < $< > $@ || rm $@
 
 pc_verbose = $(pc_verbose_@AM_V@)
@@ -79,8 +77,6 @@ dllconfig_verbose_0 = @echo "  DLLCONF " $@;
 %.dll.config: %.dll.config.in Makefile
 	@rm -f $@
 	$(dllconfig_verbose)$(sed_process)
-
-pkgconfig_DATA += ender-sharp.pc
 
 $(output_CHECK):
 	@mkdir -p $(output_DIR)
