@@ -103,6 +103,7 @@ AC_SUBST(CSC)
 AC_SUBST(GACUTIL)
 
 PKG_CHECK_MODULES([ENESIM], [enesim])
+PKG_CHECK_MODULES([ENDER_SHARP], [ender-sharp])
 ## Make the debug preprocessor configurable
 
 AC_CONFIG_FILES([
